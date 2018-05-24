@@ -1,0 +1,25 @@
+html,body{
+	padding:0;
+	margin:0;
+	background: 	rgba(0,0,0,0);
+	overflow-y: 	hidden;
+	height:100%;
+	width:100%;
+}
+#map{
+	padding:0;
+	margin:0;
+	
+	height:100%;
+	width:100%;
+}
+p{
+	white-space: nowrap;
+	width:100%;
+}
+.popover{
+	max-width: none !important;
+}
+.popover.top>.arrow:after{
+	bottom:2px !important;
+}

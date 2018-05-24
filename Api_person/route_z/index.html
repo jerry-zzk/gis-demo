@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/lib/ol3/ol.css">
+    <link rel="stylesheet" href="js/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/lib/ol3-ext.min.css">
+    <style>
+        .table-responsive{
+            width:15%;
+            position:absolute;
+            top:5%;
+            right:1%;
+            z-index:10000;
+        }
+        .table-responsive1{
+            display:none;
+            width:75%;
+            position:absolute;
+            top:5%;
+            left:5%;
+            z-index:10000;
+        }
+        .table{
+            text-align:center;   
+        }
+        .table>tbody>tr>td{
+            vertical-align:middle;
+        }
+        #start-animation{
+            position:absolute;
+            bottom:5%;
+            left:1%;
+            z-index:10000;
+        }
+         #lab{
+            position:absolute;
+            bottom:5%;
+            left:9%;
+            z-index:10000;
+        }
+        #flight-animation{
+            position:absolute;
+            bottom:5%;
+            right:5%;
+            z-index:10000;
+        }
+        #export-png{
+            position:absolute;
+            bottom:1%;
+            right:15%;
+            z-index:10000;
+        }
+        #ipshow{
+            position:absolute;
+            bottom:1%;
+            right:5%;
+            z-index:10000;
+        }
+        #screen{
+            position:absolute;
+            bottom:1%;
+            right:25%;
+            z-index:10000;
+        }
+        #cle{
+            position:absolute;
+            bottom:1%;
+            right:30%;
+            z-index:10000;
+        }
+        #pointAni{
+            position:absolute;
+            bottom:1%;
+            right:35%;
+            z-index:10000;
+        }
+        .css_animation{
+            height:30px;
+            width:30px;
+            border-radius: 15px;
+            background: rgba(255, 0, 0, 0.9);
+
+            transform: scale(0.2);
+            animation: myfirst 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myfirst{
+            to{
+                transform: scale(1.5);
+                background: rgba(255, 10, 25, 0.4);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="map">
+    <!-- <div id="mouse-position"></div> -->
+    <button id="start-animation" class="btn btn-danger">Animation</button>
+    <button id="flight-animation" class="btn btn-danger">flight</button>
+    <label for="speed" id="lab">
+      speed:&nbsp;<input id="speed" type="number" min="0.1" max="500" step="0.2" value="0.5" >
+    </label>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="success">
+                    <td>经纬度</td>
+                    <td>新增</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <a id="export-png" class="btn btn-default"><i class="fa fa-download"></i>下载保存</a>
+    <a id="ipshow" class="btn btn-default">ip数据展示</a>
+    <a id="screen" class="btn btn-default">截图</a>
+    <a id="cle" class="btn btn-default">清除</a>
+    <a id="pointAni" class="btn btn-default">点动画</a>
+
+    <div class="table-responsive1">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th colspan="2" style="text-align:center" class="success">ip数据展示</th>
+            </thead>
+            <tbody>
+               <!--  <tr class="warning">
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <form class="form-inline">
+      <label>Geometry type &nbsp;</label>
+      <select id="type">
+        <option value="Point">Point</option>
+        <option value="LineString">LineString</option>
+        <option value="Polygon">Polygon</option>
+        <option value="Circle">Circle</option>
+        <option value="None">None</option>
+      </select>
+    </form> -->
+
+</div>
+<script data-main="js/main.js" src="js/lib/require.js"></script>
+</body>
+</html>
