@@ -1,2 +1,1 @@
-# gis-demo
 demo
